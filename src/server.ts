@@ -11,11 +11,11 @@ import {filterImageFromURL} from './util/util';
 
   app.use(bodyParser.json());
 
-  app.get( "/", async ( req, res ) => {
+  app.get( "/", async (req: req,res: res ) => {
     res.send("try GET /filteredimage?image_url={{}}")
   } );
 
-  app.get("/filteredimage", async ( req, res ) => {
+  app.get("/filteredimage", async (req: req, res: res ) => {
     const image_url:string = req.query.image_url;
 
     if (!image_url) {
